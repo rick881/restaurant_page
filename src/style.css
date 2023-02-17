@@ -8,7 +8,7 @@
 body {
     background-image: url(../src/assets/Home-Page-Slider-Image.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@ body {
 h1, h2 {
     color: white;
 }
-
+/* ============= */
 navbar {
     background: rgba(34, 34, 59, .8);
     position: fixed;
@@ -55,17 +55,20 @@ navbar {
     transform: translateY(-10px);
     font-weight: 600;
 }
-
-.menu-head {
+/* ============= */
+.menu-header {
+    padding-bottom: 2rem;
+}
+.menu-title {
     color: white;
+    border-bottom:  2px solid white;
 }
 .menu-items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto auto;
+    place-items: center;
     gap: 3.5rem;
-    position: absolute;
-    top: 9rem;
-    overflow-wrap: break-word;
+    margin-top: 7rem;
 }
 .our-menus {
     display: flex;
@@ -73,11 +76,14 @@ navbar {
     padding-bottom: 1.5rem;
 }
 .our-menus img{
-    max-width: 300px;
+    max-width: 280px;
     height: auto;
-    object-fit: contain;
     border: 5px solid #f1faee;
     border-radius: 1rem;
+}
+.menu-photo {
+    width: auto;
+    object-fit: cover;
 }
 .our-menus .menu-description {
     max-width: 18rem;
@@ -92,3 +98,4 @@ navbar {
 .detail {
     padding-top: 1rem;
 }
+
